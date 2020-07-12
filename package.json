@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/computnik/sapper-site#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",
     "eslint-plugin-svelte3": "^2.7.3",
     "husky": "^4.2.5",

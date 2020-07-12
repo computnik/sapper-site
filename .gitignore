@@ -19,6 +19,7 @@ node_modules
 *.sublime-workspace
 *.sublime-project
 .vscode
+.eslintcache
 
 # OS files
 .DS_Store*
