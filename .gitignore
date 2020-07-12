@@ -1,2 +1,41 @@
-node_modules/
-*/.DS_Store
+# Usual Ignore File Patterns
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.orig
+
+# Dependencies
+node_modules
+
+# IDEs and Code Editors
+.project
+.idea
+.settings
+.iml
+*.sublime-workspace
+*.sublime-project
+.vscode
+
+# OS files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+
+# Transpiled files
+dist/**
+
+## Test/Coverage Reports ##
+reports
+
+## EXCEPTIONS ##
+!**/*/.gitkeep

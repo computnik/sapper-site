@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "test": "echo 'test'",
-    "lint": "prettier --write . && eslint ."
+    "lint": "npm run format && npm run fix",
+    "fix": "eslint --fix \"*.{js,svelte}\"",
+    "format": "prettier --write \"*.{js,svelte}\""
   },
   "repository": {
     "type": "git",
