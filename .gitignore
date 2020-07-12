@@ -35,6 +35,7 @@ Thumbs.db
 # Transpiled files
 dist/**
 __sapper__/
+static/css
 
 ## Test/Coverage Reports ##
 reports

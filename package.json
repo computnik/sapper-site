@@ -5,14 +5,19 @@
   "main": "src/server.js",
   "private": true,
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build",
-    "export": "sapper export",
+    "dev": "run-p dev:sapper watch:tailwind",
+    "dev:sapper": "sapper dev",
+    "build": "run-s build:tailwind build:sapper",
+    "build:sapper": "sapper build",
+    "export": "run-s build:tailwind export:sapper",
+    "export:sapper": "sapper export",
     "start": "node __sapper__/build",
     "test": "echo 'test'",
-    "lint": "npm run format && npm run fix",
+    "lint": "run-s format fix",
     "fix": "echo 'Running eslint on js & svelte files' && eslint --fix \"*.{js,svelte}\"",
-    "format": "echo 'Autoformatting js & svelte files with prettier' && prettier --write \"*.{js,json,svelte}\""
+    "format": "echo 'Autoformatting js & svelte files with prettier' && prettier --write \"*.{js,json,svelte}\"",
+    "watch:tailwind": "postcss static/styles/tailwind.css -o static/css/global.css -w",
+    "build:tailwind": "NODE_ENV=production postcss static/styles/tailwind.css -o static/css/global.css"
   },
   "repository": {
     "type": "git",
@@ -38,16 +43,20 @@
     "sirv": "^1.0.1"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",
     "eslint-plugin-svelte3": "^2.7.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
     "prettier": "^2.0.5",
     "prettier-plugin-svelte": "^1.1.0",
     "sapper": "^0.27.16",
     "svelte": "^3.24.0",
     "svelte-loader": "^2.13.6",
+    "tailwindcss": "^1.4.6",
     "webpack": "^4.43.0"
   },
   "husky": {
