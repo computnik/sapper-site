@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "private": true,
   "scripts": {
-    "test": "echo 'test'"
+    "test": "echo 'test'",
+    "lint": "prettier --write . && eslint ."
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,10 @@
   },
   "homepage": "https://github.com/computnik/sapper-site#readme",
   "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^1.1.0",
     "sapper": "^0.27.16",
     "svelte": "^3.24.0",
     "webpack": "^4.43.0"
