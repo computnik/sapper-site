@@ -2,12 +2,13 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
 const pkg = require('./package.json');
+const { mdsvex } = require('mdsvex');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
 const alias = { svelte: path.resolve('node_modules', 'svelte') };
-const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
+const extensions = ['.mjs', '.js', '.json', '.svelte', '.html', '.svx'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 
 module.exports = {
@@ -18,10 +19,11 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.(svelte|html)$/,
+          test: /\.(svelte|html|svx)$/,
           use: {
             loader: 'svelte-loader',
             options: {
+              preprocess: mdsvex(),
               dev,
               hydratable: true,
               hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
@@ -51,10 +53,11 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.(svelte|html)$/,
+          test: /\.(svelte|html|svx)$/,
           use: {
             loader: 'svelte-loader',
             options: {
+              preprocess: mdsvex(),
               css: false,
               generate: 'ssr',
               dev,

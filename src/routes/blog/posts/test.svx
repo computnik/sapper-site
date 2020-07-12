@@ -1,0 +1,50 @@
+---
+title: Markdown with svelte
+count: 25
+list: ['red', 'green', 'blue']
+---
+
+<style>
+	div {
+		background: pink;
+		border: 23px solid orange;
+		padding: 0 15px;
+		width: 400px;
+		text-align: center;
+		transform: translateX(-200px);
+		animation: 2s slide infinite alternate ease-in-out;
+  }
+
+	@keyframes slide {
+		from {
+			transform: translateX(-200px)
+		}
+		to {
+			transform: translateX(200px)
+		}
+	}
+</style>
+
+<script>let scriptParam = "testing-svelte-script";</script>
+
+# { title }
+
+## Good stuff in your markdown
+
+Markdown is pretty good but sometimes you just need more.
+
+```javascript
+function log(param) {
+  console.log(`${scriptParam}`);
+  console.log(param);
+}
+```
+
+### Styled tag
+
+<div>
+#### I wasn't joking
+```
+	This is real life
+```
+</div>
