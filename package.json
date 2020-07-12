@@ -1,0 +1,27 @@
+{
+  "name": "sapper-site",
+  "version": "0.1.0",
+  "description": "website for computnik",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo 'test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/computnik/sapper-site.git"
+  },
+  "keywords": [
+    "website",
+    "svelte",
+    "sapper",
+    "computnik",
+    "personal",
+    "blog"
+  ],
+  "author": "Nikhil Motiani <motianinikhil@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/computnik/sapper-site/issues"
+  },
+  "homepage": "https://github.com/computnik/sapper-site#readme"
+}
