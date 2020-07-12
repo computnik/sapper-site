@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "website for computnik",
   "main": "src/server.js",
+  "private": true,
   "scripts": {
     "test": "echo 'test'"
   },
@@ -23,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/computnik/sapper-site/issues"
   },
-  "homepage": "https://github.com/computnik/sapper-site#readme"
+  "homepage": "https://github.com/computnik/sapper-site#readme",
+  "devDependencies": {
+    "sapper": "^0.27.16",
+    "svelte": "^3.24.0"
+  }
 }
