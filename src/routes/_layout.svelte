@@ -1,11 +1,15 @@
 <style>
-  main {
-    position: relative;
-    max-width: 56em;
-    background-color: white;
-    padding: 2em;
-    margin: 0 auto;
-    box-sizing: border-box;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #cbd5e0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2d3748;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #718096;
   }
 </style>
 
