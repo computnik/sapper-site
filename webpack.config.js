@@ -1,2 +1,2 @@
-const webpack = require("webpack");
-module.exports = {};
+const webpack = require('webpack')
+module.exports = {}

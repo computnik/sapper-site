@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo 'test'",
     "lint": "npm run format && npm run fix",
-    "fix": "eslint --fix \"*.{js,svelte}\"",
-    "format": "prettier --write \"*.{js,svelte}\""
+    "fix": "echo 'Running eslint on js & svelte files' && eslint --fix \"*.{js,svelte}\"",
+    "format": "echo 'Autoformatting js & svelte files with prettier' && prettier --write \"*.{js,json,svelte}\""
   },
   "repository": {
     "type": "git",
@@ -31,10 +31,21 @@
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "prettier-plugin-svelte": "^1.1.0",
     "sapper": "^0.27.16",
     "svelte": "^3.24.0",
     "webpack": "^4.43.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,svelte,md}": "prettier --write",
+    "*.{js,svelte}": "eslint --cache --fix"
   }
 }
