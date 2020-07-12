@@ -5,6 +5,10 @@
   "main": "src/server.js",
   "private": true,
   "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "export": "sapper export",
+    "start": "node __sapper__/build",
     "test": "echo 'test'",
     "lint": "npm run format && npm run fix",
     "fix": "echo 'Running eslint on js & svelte files' && eslint --fix \"*.{js,svelte}\"",
@@ -28,6 +32,11 @@
     "url": "https://github.com/computnik/sapper-site/issues"
   },
   "homepage": "https://github.com/computnik/sapper-site#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "polka": "^0.5.2",
+    "sirv": "^1.0.1"
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",
@@ -38,6 +47,7 @@
     "prettier-plugin-svelte": "^1.1.0",
     "sapper": "^0.27.16",
     "svelte": "^3.24.0",
+    "svelte-loader": "^2.13.6",
     "webpack": "^4.43.0"
   },
   "husky": {
